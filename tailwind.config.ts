@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -84,11 +85,31 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'progress-fill': {
+					'0%': { width: '0%' },
+					'100%': { width: 'var(--progress-value)' }
+				},
+				'badge-bounce': {
+					'0%, 100%': { transform: 'scale(1)' },
+					'50%': { transform: 'scale(1.1)' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'progress-fill': 'progress-fill 1s ease-out',
+				'badge-bounce': 'badge-bounce 0.6s ease-in-out',
+				'float': 'float 3s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'fitness-gradient': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+				'success-gradient': 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+				'energy-gradient': 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
 			}
 		}
 	},
